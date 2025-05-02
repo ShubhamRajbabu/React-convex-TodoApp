@@ -31,7 +31,7 @@ const TodoList = () => {
                         className="bg-zinc-800 hover:bg-zinc-600 text-white px-4 py-2 rounded-xl"
                         disabled={isLoading}
                     >
-                        {isLoading ? "Loading..." : "Load More"}
+                        {(isLoading || todos.length > 5) ? "Loading..." : "Load More"}
                     </button>
                 )}
                 {(status != "CanLoadMore" && todos.length != 0) && <p className="text-gray-400">End of list</p>}
